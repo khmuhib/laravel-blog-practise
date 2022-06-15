@@ -17,13 +17,14 @@
             <div class="alert alert-success">{{session('message')}}</div>
             @endif
 
-            <table class="table table-bordered">
+            <table class="table table-bordered" >
                 <thead>
                     <th>Id</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Status</th>
                     <th>Edit</th>
+                    <th>Delete</th>
                 </thead>
                 <tbody>
                     @foreach ($users as $user)

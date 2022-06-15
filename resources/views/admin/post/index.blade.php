@@ -17,15 +17,14 @@
 
             <table class="table table-bordered">
                 <thead>
-                    <tr>
-                        <td>ID</td>
-                        <td>Post Category</td>
-                        <td>Post Name</td>
-                        <td>Post Slug</td>
-                        <td>Post Description</td>
-                        <td>State</td>
-                        <td>Edit</td>
-                    </tr>
+                    <td>ID</td>
+                    <td>Post Category</td>
+                    <td>Post Name</td>
+                    <td>Post Slug</td>
+                    <td>Post Description</td>
+                    <td>State</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
                 </thead>
 
                 <tbody>
@@ -39,6 +38,8 @@
                             <td>{{$item->status == '1' ? 'Hidden':'Visible'}}</td>
                             <td>
                                 <a href="{{url('admin/post/'.$item->id)}}" class="btn btn-primary">Edit</a>
+                            </td>
+                            <td>
                                 <a href="{{url('admin/delete-post/'.$item->id)}}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
 
@@ -17,7 +18,12 @@
     {{-- Summer Note Css --}}
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+
+
+
+
 </head>
+
 <body>
 
     @include('layouts.inc.admin-navbar')
@@ -37,14 +43,17 @@
 
 
 
-    <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"""></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+    {{-- <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script> --}}
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> --}}
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
-    <script src="{{ asset('assets/js/datatables-simple-demo.js') }}"></script>
 
     {{-- Summer Note Js --}}
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
 
     <script>
         $(document).ready(function() {
@@ -54,5 +63,8 @@
             $('.dropdown-toggle').dropdown();
         });
     </script>
+
+
 </body>
+
 </html>
