@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'View Post')
+@section('title', 'Edit Post')
 
 @section('content')
 
@@ -8,7 +8,10 @@
 
     <div class="card mt-4">
         <div class="card-header">
-            <h4>Add Post Page</h4>
+            <h4>
+                Edit Post Page
+                <a href="{{url('admin/posts')}}" class="btn btn-danger float-end">Back</a>
+            </h4>
         </div>
 
         <div class="card-body">
@@ -24,45 +27,47 @@
             @endif
 
 
-            <form action="{{url('admin/add-post')}}" method="POST">
+            <form action="{{url('admin/update-post/'.$post->id)}}" method="POST">
                 @csrf
+                @method('PUT')
                 <div class="mb-3">
                     <label for="">Category</label>
                     <select class="form-control" name="category_id">
+                        <option value="">--Select Category--</option>
                         @foreach ($category as $cateitem)
-                            <option value="{{$cateitem->id}}">{{$cateitem->name}}</option>
+                            <option value="{{$cateitem->id}}" {{$post->category_id == $cateitem->id ? 'selected' : ''}}>{{$cateitem->name}}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="">Post Name</label>
-                    <input type="text" name="name" class="form-control">
+                    <input type="text" name="name" value="{{$post->name}}" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label for="">Slug</label>
-                    <input type="text" name="slug" class="form-control">
+                    <input type="text" name="slug" value="{{$post->slug}}"  class="form-control">
                 </div>
                 <div class="mb-3">
                     <label for="">Description</label>
-                    <textarea id="mysummernote" type="text" name="description" class="form-control" rows="5"></textarea>
+                    <textarea type="text" id="mysummernote" name="description" class="form-control" rows="5">{!! $post->description !!}</textarea>
                 </div>
                 <div class="mb-3">
                     <label for="">Youtube iframe Link</label>
-                    <input type="text" name="yt_iframe" class="form-control">
+                    <input type="text" name="yt_iframe" value="{{$post->yt_iframe}}"  class="form-control">
                 </div>
 
                 <h4>Seo Tags</h4>
                 <div class="mb-3">
                     <label for="">Meta Title</label>
-                    <input type="text" name="meta_title" class="form-control">
+                    <input type="text" name="meta_title" value="{{$post->meta_title}}"  class="form-control">
                 </div>
                 <div class="mb-3">
                     <label for="">Meta Description</label>
-                    <textarea type="text" name="meta_description" class="form-control" rows="3"></textarea>
+                    <textarea type="text" name="meta_description" class="form-control" rows="3">{{$post->meta_description}}</textarea>
                 </div>
                 <div class="mb-3">
                     <label for="">Meta Keyword</label>
-                    <textarea type="text" name="meta_keyword" class="form-control" rows="3"></textarea>
+                    <textarea type="text" name="meta_keyword" class="form-control" rows="3">{{$post->meta_keyword}}</textarea>
                 </div>
 
                 <h4>Status</h4>

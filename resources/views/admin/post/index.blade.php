@@ -24,6 +24,7 @@
                         <td>Post Slug</td>
                         <td>Post Description</td>
                         <td>State</td>
+                        <td>Edit</td>
                     </tr>
                 </thead>
 
@@ -36,6 +37,10 @@
                             <td>{{$item->slug}}</td>
                             <td>{{$item->description}}</td>
                             <td>{{$item->status == '1' ? 'Hidden':'Visible'}}</td>
+                            <td>
+                                <a href="{{url('admin/post/'.$item->id)}}" class="btn btn-primary">Edit</a>
+                                <a href="{{url('admin/delete-post/'.$item->id)}}" class="btn btn-danger">Delete</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

@@ -8,7 +8,11 @@
 
     <div class="card mt-4">
         <div class="card-header">
-            <h4>Edit Category Page</h4>
+            <h4>
+                Edit Category Page
+
+                <a href="{{url('admin/category')}}" class="btn btn-danger float-end">Back</a>
+            </h4>
         </div>
 
         <div class="card-body">
@@ -39,7 +43,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="">Description</label>
-                    <textarea type="text" name="description" class="form-control" rows="5">{{$category->description}}</textarea>
+                    <textarea type="text" id="mysummernote" name="description" class="form-control" rows="5">{{$category->description}}</textarea>
                 </div>
                 <div class="mb-3">
                     <label for="">Image</label>
