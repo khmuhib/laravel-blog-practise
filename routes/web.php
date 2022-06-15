@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DeshBoardController;
+use App\Http\Controllers\Admin\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,5 +33,10 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function() {
     Route::get('/edit-category/{category_id}', [CategoryController::class, 'edit']);
     Route::put('/update-category/{category_id}', [CategoryController::class, 'update']);
     Route::get('/delete-category/{category_id}', [CategoryController::class, 'delete']);
+
+
+    Route::get('posts', [PostController::class, 'index'])->name('posts');
+    Route::get('add-post', [PostController::class, 'create']);
+    Route::post('add-post', [PostController::class, 'store']);
 });
 
