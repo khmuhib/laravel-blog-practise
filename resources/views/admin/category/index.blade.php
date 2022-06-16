@@ -17,7 +17,7 @@
             @endif
 
 
-            <table class="table table-bordered">
+            <table class="table table-bordered"  id="myTable">
                 <thead>
                     <tr>
                         <th>ID</th>
