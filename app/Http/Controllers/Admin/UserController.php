@@ -28,4 +28,10 @@ class UserController extends Controller
 
         return redirect('admin/users')->with('message', 'User Not Found');
     }
+
+    public function delete($user_id) {
+        $user = User::find($user_id);
+        $user->delete();
+        return redirect('admin/users')->with('message', 'User Deleted successfully');
+    }
 }
