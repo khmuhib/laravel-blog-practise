@@ -37,7 +37,7 @@
                                 <a href="{{url('admin/user/'.$user->id)}}" class="btn btn-success">Edit</a>
                             </td>
                             <td>
-                                <a href="{{url('admin/users/'.$user->id)}}" class="btn btn-danger">Delete</a>
+                                <a href="{{url('admin/user-delete/'.$user->id)}}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                     @endforeach
