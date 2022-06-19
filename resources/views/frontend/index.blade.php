@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<h4>sadas</h4>
+<h4>Home page</h4>
 
 @endsection
