@@ -25,7 +25,7 @@ class Post extends Model
         "created_by"
     ];
 
-    public function categroy () {
+    public function category () {
         return $this->belongsTo(Category::class, 'category_id', 'id');
     }
 

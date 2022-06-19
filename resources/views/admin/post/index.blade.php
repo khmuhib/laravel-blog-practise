@@ -17,24 +17,24 @@
 
             <table class="table table-bordered" id="myTable">
                 <thead>
-                    <td>ID</td>
-                    <td>Post Category</td>
-                    <td>Post Name</td>
-                    <td>Post Slug</td>
-                    <td>Post Description</td>
-                    <td>State</td>
-                    <td>Edit</td>
-                    <td>Delete</td>
+                    <tr>
+                        <td>ID</td>
+                        <td>Post Category</td>
+                        <td>Post Name</td>
+                        <td>Post Slug</td>
+                        <td>State</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
+                    </tr>
                 </thead>
 
                 <tbody>
                     @foreach ($posts as $item)
                         <tr>
                             <td>{{$item->id}}</td>
-                            <td>{{$item->categroy->name}}</td>
+                            <td>{{$item->category->name}}</td>
                             <td>{{$item->name}}</td>
                             <td>{{$item->slug}}</td>
-                            <td>{{$item->description}}</td>
                             <td>{{$item->status == '1' ? 'Hidden':'Visible'}}</td>
                             <td>
                                 <a href="{{url('admin/post/'.$item->id)}}" class="btn btn-primary">Edit</a>
@@ -46,7 +46,6 @@
                     @endforeach
                 </tbody>
             </table>
-
         </div>
     </div>
 
