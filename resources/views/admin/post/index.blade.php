@@ -32,7 +32,7 @@
                     @foreach ($posts as $item)
                         <tr>
                             <td>{{$item->id}}</td>
-                            <td>{{$item->categroy->name}}</td>
+                            <td>{{$item->category->name}}</td>
                             <td>{{$item->name}}</td>
                             <td>{{$item->slug}}</td>
                             <td>{{$item->status == '1' ? 'Hidden':'Visible'}}</td>
