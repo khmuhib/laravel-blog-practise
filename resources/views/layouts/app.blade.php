@@ -32,7 +32,7 @@
     <div id="app">
         @include('layouts.inc.frontend-navbar')
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
     </div>
@@ -46,6 +46,8 @@
     <script>
         $('.category-carousel').owlCarousel({
             loop:true,
+            autoplay:true,
+            autoplayTimeout:500,
             margin:10,
             nav:true,
             dots:false,
