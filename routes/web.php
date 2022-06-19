@@ -30,6 +30,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [FrontendController::class, 'index']);
 
+Route::get('tutorial/{category_slug}', [FrontendController::class, 'viewCategoryPost']);
+
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function() {
     Route::get('/deshboard', [DeshBoardController::class, 'index']);
     Route::get('/category', [CategoryController::class, 'index']);
