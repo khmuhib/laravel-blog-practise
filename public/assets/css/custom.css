@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+
 .bg-green {
     background-color: blueviolet;
 }
 
 .bg-green a {
     font-weight: bold;
-    font-size: 20px!important;
+    font-size: 20px !important;
 }
 
 .card-shadow {
@@ -16,7 +18,6 @@
     padding: 10px 12px;
     border-left: 6px solid #000;
     background-color: #ddd;
-
 }
 
 .post-heading {
@@ -26,12 +27,54 @@
 
 .owl-nav button.owl-next,
 .owl-nav button.owl-prev {
-    color: #fff!important;
+    color: #fff !important;
     margin-left: 10px;
-    background-color: orange!important;
-    border: none!important;
+    background-color: orange !important;
+    border: none !important;
     outline: none;
     font-size: 20px !important;
     height: 28px;
     width: 38px !important;
+}
+
+.underline {
+    height: 3px;
+    width: 60px;
+    background-color: #e71212;
+    margin-bottom: 10px;
+}
+
+.bg-gray {
+    background-color: white;
+}
+
+.aaa {
+    color: #C17575;
+    font-size: 100px;
+    font-weight: bold;
+
+    position: relative;
+    text-transform: uppercase;
+
+    width: 800px;
+    margin: auto;
+
+    background-color: rebeccapurple;
+
+}
+
+.aaa:before {
+    content: 'Advertising';
+
+    position: absolute;
+
+    display: block;
+    top: 5px;
+    left: 70px;
+
+    color: black;
+
+    background: -webkit-linear-gradient(-90deg, rgba(26, 53, 53, 0.93), #D4BCBC,#884444, #D4BCBC,#884444, #D4BCBC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

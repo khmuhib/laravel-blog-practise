@@ -35,6 +35,8 @@
         <main class="">
             @yield('content')
         </main>
+
+        @include('layouts.inc.frontend-footer')
     </div>
 
 
