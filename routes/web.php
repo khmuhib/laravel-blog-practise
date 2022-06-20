@@ -33,6 +33,8 @@ Route::get('/', [FrontendController::class, 'index']);
 Route::get('tutorial/{category_slug}', [FrontendController::class, 'viewCategoryPost']);
 Route::get('tutorial/{category_slug}/{post_slug}', [FrontendController::class, 'viewPost']);
 
+
+
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function() {
     Route::get('/deshboard', [DeshBoardController::class, 'index']);
     Route::get('/category', [CategoryController::class, 'index']);
