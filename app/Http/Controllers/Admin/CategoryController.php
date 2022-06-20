@@ -88,8 +88,8 @@ class CategoryController extends Controller
 
     }
 
-    public function delete ($category_id) {
-        $category = Category::find($category_id);
+    public function delete (Request $request) {
+        $category = Category::find($request->category_delete_id);
 
         if($category) {
 

@@ -83,6 +83,8 @@
         });
     </script>
 
+    @yield('scripts')
+
 
 </body>
 

@@ -43,7 +43,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="">Image</label>
-                    <input type="file" name="image" class="form-control" rows="5">
+                    <input type="file" name="image" class="form-control" rows="5" required>
                 </div>
                 <h6>SEO Tags</h6>
                 <div class="mb-3">
