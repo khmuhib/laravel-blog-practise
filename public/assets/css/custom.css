@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
 
 .bg-green {
     background-color: blueviolet;
@@ -49,7 +49,7 @@
 }
 
 .aaa {
-    color: #C17575;
+    color: #c17575;
     font-size: 100px;
     font-weight: bold;
 
@@ -60,11 +60,10 @@
     margin: auto;
 
     background-color: rebeccapurple;
-
 }
 
 .aaa:before {
-    content: 'Advertising';
+    content: "Advertising";
 
     position: absolute;
 
@@ -74,7 +73,33 @@
 
     color: black;
 
-    background: -webkit-linear-gradient(-90deg, rgba(26, 53, 53, 0.93), #D4BCBC,#884444, #D4BCBC,#884444, #D4BCBC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(
+        -90deg,
+        rgba(26, 53, 53, 0.93),
+        #d4bcbc,
+        #884444,
+        #d4bcbc,
+        #884444,
+        #d4bcbc
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.post-description {
+    overflow: hidden;
+    scrollbar-width: none;
+}
+
+.post-code-bg {
+    width: fit-content;
+    min-width: 100%;
+    background-color: #212121 !important;
+    width: 100% !important;
+    overflow-x: scroll !important;
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
 }
